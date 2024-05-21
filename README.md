@@ -89,3 +89,10 @@ Clave primaria: ID
 ## Conclusión
 
 La implementación de una base de datos en ContrucEtitc.sas es un paso esencial para mejorar la gestión y operación de la empresa. Una base de datos bien diseñada permitirá a la empresa aumentar su eficiencia, optimizar sus recursos y mejorar su competitividad en el mercado de la construcción. Además, este proyecto refleja los conocimientos adquiridos en la asignatura de bases de datos, demostrando su aplicación práctica y su valor en el contexto empresarial.
+
+
+## Distribución de Tareas
+
+- Diagrama ER: Oscar Villalobos.
+- Normalización: Jhon Ramos y Carlos Fernandez.
+- Consultas: Oscar Villalobos, Carlos Fernandez y Jhon Ramos.
