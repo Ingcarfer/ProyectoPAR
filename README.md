@@ -23,6 +23,67 @@ Tienes razón. Aquí está la lista utilizando el formato adecuado para listas n
 
 
 ## Meta data
+### Tablas:
+clientes:
+
+Atributos:
+- ID (int)
+- Nombre (varchar(20))
+- dirección (varchar(50))
+- ciudad (varchar(255))
+- condado (varchar(20))
+- código_postal (varchar(20))
+- país (varchar(20))
+- número_de_teléfono (varchar(20))
+
+Clave primaria: ID
+
+contratistas:
+
+Columnas:
+- ID (int)
+- Nombre_de_la_empresa (varchar(255))
+- Direccion (varchar(255))
+- Correo_electronico (varchar(255))
+- Actividad (varchar(100))
+
+Clave primaria: ID
+
+presupuesto:
+
+Columnas:
+- ID (int)
+- Descripcion (varchar(255))
+- Unidad_de_Medida (varchar(50))
+- Actividad (varchar(255))
+- Cantidad (decimal(10,2))
+- Valor_Unitario (decimal(10,2))
+- Valor_Total (decimal(10,2))
+
+Clave primaria: ID
+
+programacion:
+
+Columnas:
+- ID (int)
+- Descripcion (varchar(50))
+- Responsable (varchar(50))
+- Fecha_de_inicio (date)
+- Fecha_de_finalizacion (date)
+- Estado (varchar(20))
+
+Clave primaria: ID
+
+proveedores:
+
+Columnas:
+- ID (int)
+- Nombre_de_la_empresa (varchar(255))
+- Direccion (varchar(255))
+- Correo_electronico (varchar(255))
+- Actividad (varchar(100))
+
+Clave primaria: ID
 
 
 ## Conclusión
