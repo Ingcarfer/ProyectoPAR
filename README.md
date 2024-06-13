@@ -92,6 +92,153 @@ Clave primaria: ID
 - Normalización: Jhon Ramos y Carlos Fernandez.
 - Consultas: Oscar Villalobos, Carlos Fernandez y Jhon Ramos.
 
+## Desarrollo del proyecto
+
+### Creacion de tablas y sus relaciones
+```sql
+-- Tabla: clientes
+CREATE TABLE clientes (
+    ID INT PRIMARY KEY,
+    Nombre VARCHAR(20),
+    Direccion VARCHAR(50),
+    Ciudad VARCHAR(255),
+    Condado VARCHAR(20),
+    Codigo_Postal VARCHAR(20),
+    Pais VARCHAR(20),
+    Numero_de_Telefono VARCHAR(20)
+);
+
+-- Tabla: contratistas
+CREATE TABLE contratistas (
+    ID INT PRIMARY KEY,
+    Nombre_de_la_Empresa VARCHAR(255),
+    Direccion VARCHAR(255),
+    Correo_Electronico VARCHAR(255),
+    Actividad VARCHAR(100)
+);
+
+-- Tabla: proveedores
+CREATE TABLE proveedores (
+    ID INT PRIMARY KEY,
+    Nombre_de_la_Empresa VARCHAR(255),
+    Direccion VARCHAR(255),
+    Correo_Electronico VARCHAR(255),
+    Actividad VARCHAR(100)
+);
+
+-- Tabla: empleados
+CREATE TABLE empleados (
+    ID INT PRIMARY KEY,
+    Nombre VARCHAR(50),
+    Apellido VARCHAR(50),
+    Cargo VARCHAR(50),
+    Correo_Electronico VARCHAR(255),
+    Telefono VARCHAR(20)
+);
+
+-- Tabla: proyectos
+CREATE TABLE proyectos (
+    ID INT PRIMARY KEY,
+    Nombre VARCHAR(255),
+    Descripcion TEXT,
+    Cliente_ID INT,
+    Fecha_de_Inicio DATE,
+    Fecha_de_Finalizacion DATE,
+    Estado VARCHAR(20),
+    FOREIGN KEY (Cliente_ID) REFERENCES clientes(ID)
+);
+
+-- Tabla: tareas
+CREATE TABLE tareas (
+    ID INT PRIMARY KEY,
+    Proyecto_ID INT,
+    Descripcion TEXT,
+    Responsable_ID INT,
+    Empleado_ID INT,
+    Fecha_de_Inicio DATE,
+    Fecha_de_Finalizacion DATE,
+    Estado VARCHAR(20),
+    FOREIGN KEY (Proyecto_ID) REFERENCES proyectos(ID),
+    FOREIGN KEY (Responsable_ID) REFERENCES contratistas(ID),
+    FOREIGN KEY (Empleado_ID) REFERENCES empleados(ID)
+);
+
+-- Tabla: materiales
+CREATE TABLE materiales (
+    ID INT PRIMARY KEY,
+    Nombre VARCHAR(255),
+    Descripcion TEXT,
+    Proveedor_ID INT,
+    Precio DECIMAL(10,2),
+    FOREIGN KEY (Proveedor_ID) REFERENCES proveedores(ID)
+);
+
+-- Tabla: ordenes_de_compra
+CREATE TABLE ordenes_de_compra (
+    ID INT PRIMARY KEY,
+    Proyecto_ID INT,
+    Material_ID INT,
+    Cantidad DECIMAL(10,2),
+    Precio_Total DECIMAL(10,2),
+    Fecha DATE,
+    FOREIGN KEY (Proyecto_ID) REFERENCES proyectos(ID),
+    FOREIGN KEY (Material_ID) REFERENCES materiales(ID)
+);
+
+-- Tabla: facturas
+CREATE TABLE facturas (
+    ID INT PRIMARY KEY,
+    Proyecto_ID INT,
+    Cliente_ID INT,
+    Monto_Total DECIMAL(10,2),
+    Fecha DATE,
+    Estado VARCHAR(20),
+    FOREIGN KEY (Proyecto_ID) REFERENCES proyectos(ID),
+    FOREIGN KEY (Cliente_ID) REFERENCES clientes(ID)
+);
+
+-- Tabla: pagos
+CREATE TABLE pagos (
+    ID INT PRIMARY KEY,
+    Factura_ID INT,
+    Monto DECIMAL(10,2),
+    Fecha DATE,
+    Metodo VARCHAR(50),
+    FOREIGN KEY (Factura_ID) REFERENCES facturas(ID)
+);
+
+-- Tabla: presupuesto
+CREATE TABLE presupuesto (
+    ID INT PRIMARY KEY,
+    Descripcion VARCHAR(255),
+    Unidad_de_Medida VARCHAR(50),
+    Actividad VARCHAR(255),
+    Cantidad DECIMAL(10,2),
+    Valor_Unitario DECIMAL(10,2),
+    Valor_Total DECIMAL(10,2)
+);
+
+-- Tabla intermedia: proyecto_contratista
+CREATE TABLE proyecto_contratista (
+    Proyecto_ID INT,
+    Contratista_ID INT,
+    FOREIGN KEY (Proyecto_ID) REFERENCES proyectos(ID),
+    FOREIGN KEY (Contratista_ID) REFERENCES contratistas(ID),
+    PRIMARY KEY (Proyecto_ID, Contratista_ID)
+);
+
+-- Tabla: programacion
+CREATE TABLE programacion (
+    ID INT PRIMARY KEY,
+    Descripcion VARCHAR(50),
+    Responsable VARCHAR(50),
+    Fecha_de_Inicio DATE,
+    Fecha_de_Finalizacion DATE,
+    Estado VARCHAR(20)
+);
+
+```
+
 ## Conclusión
 
 La implementación de una base de datos en ContrucEtitc.sas es un paso esencial para mejorar la gestión y operación de la empresa. Una base de datos bien diseñada permitirá a la empresa aumentar su eficiencia, optimizar sus recursos y mejorar su competitividad en el mercado de la construcción. Además, este proyecto refleja los conocimientos adquiridos en la asignatura de bases de datos, demostrando su aplicación práctica y su valor en el contexto empresarial.
