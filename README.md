@@ -2,7 +2,7 @@
 
 # Base de Datos Para la empresa ContrucEtitc.sas
 
-## Intruducción
+## Introducción
 
 El problema que vamos abordar es la implementación de una base de datos para una empresa de construcción como ContrucEtitc.sas es esencial para gestionar eficientemente los datos relacionados con clientes, contratistas, presupuestos, programación de proyectos y proveedores. Una administración adecuada de estos datos mejorará la organización interna y potenciará tanto la eficiencia operativa como la toma de decisiones estratégicas.
 
