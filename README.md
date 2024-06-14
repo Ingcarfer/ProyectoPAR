@@ -1,4 +1,10 @@
-# ProyectoPAR
+<p align="center">
+  <h1>ProyectoPAR</h1>
+</p>
+
+<p align="center">
+  <img src="img/ETITC.png" width="400" />
+</p>
 
 # Base de Datos Para la empresa ConstrucEtitc.sas
 
