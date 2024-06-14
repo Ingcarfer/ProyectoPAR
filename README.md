@@ -223,10 +223,10 @@ CREATE TABLE actividad (
     Unidad_de_Medida VARCHAR(50),
     Cantidad DECIMAL(10,2),
     Valor_Unitario DECIMAL(10,2),
-    Valor_Total DECIMAL(10,2)
-    Prioridad VARCHAR(10)
+    Valor_Total DECIMAL(10,2),
+    Prioridad VARCHAR(10),
     Dias_de_Ejecucion INT,
-    Estado VARCHAR(15),
+    Estado VARCHAR(15)
 );
 
 -- Tabla intermedia: proyecto_contratista
