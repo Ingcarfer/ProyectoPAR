@@ -261,7 +261,7 @@ CREATE TABLE proyecto_contratista (
 #### Tabla Completa
 
 <p style="align:center">
-<img src="img/TABLA COMPLETA.png" width="800" height="400" />
+<img src="img/TABLA COMPLETA B.png" width="800" height="400" />
 </p>
 
 
@@ -270,7 +270,7 @@ CREATE TABLE proyecto_contratista (
 ##### 1. Se quitan las filas con elementos repetidos
 
 <p style="align:center">
-<img src="img/TABLA COMPLETA FN1.png" width="800" height="400" />
+<img src="img/TABLA COMPLETA FN1 B.png" width="800" height="400" />
 </p>
 
 
@@ -278,19 +278,19 @@ CREATE TABLE proyecto_contratista (
 
 ###### 1. ENTIDAD: ACTIVIDAD
 <p style="align:center">
-<img src="img/ENTIDAD ACTIVIDAD FN1.png" width="800" height="400" />
+<img src="img/ENTIDAD ACTIVIDAD FN1 B.png" width="800" height="400" />
 </p>
 
 ###### 2. ENTIDAD: PRIORIDAD
 
 <p style="align:center">
-<img src="img/ENTIDAD PRIORIDAD FN1.png" width="400" height="120" />
+<img src="img/ENTIDAD PRIORIDAD FN1 B.png" width="400" height="120" />
 </p>
 
 ###### 1. ENTIDAD: ESTADO
 
 <p style="align:center">
-<img src="img/ENTIDAD ESTADO FN1.png" width="400" height="120" />
+<img src="img/ENTIDAD ESTADO FN1 B.png" width="400" height="120" />
 </p>
 
 
@@ -301,19 +301,19 @@ CREATE TABLE proyecto_contratista (
 ###### 1. ENTIDAD: ACTIVIDAD
 
 <p style="align:center">
-<img src="img/ENTIDAD ACTIVIDAD FN2.png" width="800" height="400" />
+<img src="img/ENTIDAD ACTIVIDAD FN2 B.png" width="800" height="400" />
 </p>
 
 ###### 2. ENTIDAD: PRIORIDAD Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
 
 <p style="align:center">
-<img src="img/ENTIDAD PRIORIDAD FN2.png" width="400" height="120" />
+<img src="img/ENTIDAD PRIORIDAD FN2 B.png" width="400" height="120" />
 </p>
 
 ###### 3. ENTIDAD: ESTADO Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
 
 <p style="align:center">
-<img src="img/ENTIDAD ESTADO FN2.png" width="400" height="120" />
+<img src="img/ENTIDAD ESTADO FN2 B.png" width="400" height="120" />
 </p>
 
 #### FN3
@@ -323,19 +323,19 @@ CREATE TABLE proyecto_contratista (
 ###### ENTIDAD: ACTIVIDAD
 
 <p style="align:center">
-<img src="img/ENTIDAD ACTIVIDAD FN3.png" width="800" height="400" />
+<img src="img/ENTIDAD ACTIVIDAD FN3 B.png" width="800" height="400" />
 </p>
 
 ###### ENTIDAD: PRIORIDAD
 
 <p style="align:center">
-<img src="img/ENTIDAD PRIORIDAD FN3.png" width="400" height="120" />
+<img src="img/ENTIDAD PRIORIDAD FN3 B.png" width="400" height="120" />
 </p>
 
 ###### ENTIDAD: ESTADO
 
 <p style="align:center">
-<img src="img/ENTIDAD ESTADO FN2.png" width="400" height="120" />
+<img src="img/ENTIDAD ESTADO FN3 B.png" width="400" height="120" />
 </p>
 
 
