@@ -98,7 +98,7 @@ Clave primaria: ID
 
 ### Creacion de la base de datos
 ```sql
-CREATE DATABASE ContrucEtitc;
+CREATE DATABASE construc_etitc;
 ```
 
 ### Creacion de tablas y sus relaciones
