@@ -88,7 +88,7 @@ Clave primaria: ID
 
 ## Distribución de Tareas
 
-- Cordinación del proyecto: Carlos Fernandez
+- Coordinación del proyecto: Carlos Fernandez
 - Diseño, desarrollo e implementación de la base de datos: Oscar Villalobos, Carlos Fernandez y Jhon Ramos.
 - Normalización: Jhon Ramos
 - Diagrama ER: Oscar Villalobos.
