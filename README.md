@@ -265,13 +265,17 @@ CREATE TABLE proyecto_contratista (
 
 ##### Se definen llaves y relaciones
 
-###### 1. ENTIDAD: PRIORIDAD Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+###### 1. ENTIDAD: ACTIVIDAD
 
-###### 2. ENTIDAD: ESTADO Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+###### 2. ENTIDAD: PRIORIDAD Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+
+###### 3. ENTIDAD: ESTADO Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
 
 #### FN3
 
 ##### ELEMINAR CAMPOS QUE NO DEPENDE DE LA LLAVE Y AGREGAR TABLAS Y LLAVE NECESARIAS
+
+###### ENTIDAD: ACTIVIDAD
 
 ###### ENTIDAD: PRIORIDAD
 
