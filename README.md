@@ -285,7 +285,7 @@ CREATE TABLE proyecto_contratista (
 
 
 ### Diagrama ER
-![Normalizacion1](https://github.com/Ingcarfer/ProyectoPAR/assets/170147999/2b7b5b0a-ea40-4f82-ad46-72cd90395720)
+
 
 
 ### consultas
