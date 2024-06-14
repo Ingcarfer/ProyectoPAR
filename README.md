@@ -114,7 +114,8 @@ CREATE TABLE contratistas (
     Nombre_de_la_Empresa VARCHAR(255),
     Direccion VARCHAR(255),
     Correo_Electronico VARCHAR(255),
-    Actividad VARCHAR(100)
+    Actividad_ID INT,
+    FOREIGN KEY (Actividad_ID) REFERENCES actividad(ID)
 );
 
 -- Tabla: proveedores
@@ -123,7 +124,8 @@ CREATE TABLE proveedores (
     Nombre_de_la_Empresa VARCHAR(255),
     Direccion VARCHAR(255),
     Correo_Electronico VARCHAR(255),
-    Actividad VARCHAR(100)
+    Actividad_ID INT,
+    FOREIGN KEY (Actividad_ID) REFERENCES actividad(ID)
 );
 
 -- Tabla: empleados
@@ -207,15 +209,17 @@ CREATE TABLE pagos (
     FOREIGN KEY (Factura_ID) REFERENCES facturas(ID)
 );
 
--- Tabla: presupuesto
-CREATE TABLE presupuesto (
+-- Tabla: actividad
+CREATE TABLE actividad (
     ID INT PRIMARY KEY,
     Descripcion VARCHAR(255),
     Unidad_de_Medida VARCHAR(50),
-    Actividad VARCHAR(255),
     Cantidad DECIMAL(10,2),
     Valor_Unitario DECIMAL(10,2),
     Valor_Total DECIMAL(10,2)
+    Prioridad VARCHAR(10)
+    Dias_de_Ejecucion INT,
+    Estado VARCHAR(15),
 );
 
 -- Tabla intermedia: proyecto_contratista
