@@ -252,6 +252,32 @@ CREATE TABLE proyecto_contratista (
 
 ### Normalizacion de la tabla actividad
 
+#### Tabla Completa
+
+
+#### FN1
+
+##### 1. Se quitan las filas con elementos repetidos
+
+##### 2. Se dividen en varias tablas
+
+#### FN2
+
+##### Se definen llaves y relaciones
+
+###### 1. ENTIDAD: PRIORIDAD Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+
+###### 2. ENTIDAD: ESTADO Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+
+#### FN3
+
+##### ENTIDAD: PRIORIDAD
+
+##### ENTIDAD: ESTADO
+
+##### ELEMINAR CAMPOS QUE NO DEPENDE DE LA LLAVE Y AGREGAR TABLAS Y LLAVE NECESARIAS
+
+
 ### Diagrama ER
 
 ### consultas
