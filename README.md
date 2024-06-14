@@ -102,7 +102,12 @@ CREATE DATABASE construc_etitc;
 ```
 
 ### Creacion de tablas y sus relaciones
+
 ```sql
+
+-- Usar la base de datos construc_etitc 
+USE construc_etitc;
+
 -- Tabla: clientes
 CREATE TABLE clientes (
     ID INT PRIMARY KEY,
@@ -113,6 +118,19 @@ CREATE TABLE clientes (
     Codigo_Postal VARCHAR(20),
     Pais VARCHAR(20),
     Numero_de_Telefono VARCHAR(20)
+);
+
+-- Tabla: actividad
+CREATE TABLE actividad (
+    ID INT PRIMARY KEY,
+    Descripcion VARCHAR(255),
+    Unidad_de_Medida VARCHAR(50),
+    Cantidad DECIMAL(10,2),
+    Valor_Unitario DECIMAL(10,2),
+    Valor_Total DECIMAL(10,2),
+    Prioridad VARCHAR(10),
+    Dias_de_Ejecucion INT,
+    Estado VARCHAR(15)
 );
 
 -- Tabla: contratistas
@@ -216,18 +234,7 @@ CREATE TABLE pagos (
     FOREIGN KEY (Factura_ID) REFERENCES facturas(ID)
 );
 
--- Tabla: actividad
-CREATE TABLE actividad (
-    ID INT PRIMARY KEY,
-    Descripcion VARCHAR(255),
-    Unidad_de_Medida VARCHAR(50),
-    Cantidad DECIMAL(10,2),
-    Valor_Unitario DECIMAL(10,2),
-    Valor_Total DECIMAL(10,2),
-    Prioridad VARCHAR(10),
-    Dias_de_Ejecucion INT,
-    Estado VARCHAR(15)
-);
+
 
 -- Tabla intermedia: proyecto_contratista
 CREATE TABLE proyecto_contratista (
@@ -238,15 +245,7 @@ CREATE TABLE proyecto_contratista (
     PRIMARY KEY (Proyecto_ID, Contratista_ID)
 );
 
--- Tabla: programacion
-CREATE TABLE programacion (
-    ID INT PRIMARY KEY,
-    Descripcion VARCHAR(50),
-    Responsable VARCHAR(50),
-    Fecha_de_Inicio DATE,
-    Fecha_de_Finalizacion DATE,
-    Estado VARCHAR(20)
-);
+
 
 ```
 ### Inserción o incorporacion de Datos
