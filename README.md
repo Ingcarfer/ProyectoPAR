@@ -23,7 +23,7 @@ Tienes razón. Aquí está la lista utilizando el formato adecuado para listas n
 
 
 ## Meta data
-### Tablas:
+### Tablas iniciales :
 clientes:
 
 Atributos:
@@ -88,11 +88,18 @@ Clave primaria: ID
 
 ## Distribución de Tareas
 
+- Cordinación del proyecto: Carlos Fernandez
+- Diseño, desarrollo e implementación de la base de datos: Oscar Villalobos, Carlos Fernandez y Jhon Ramos.
+- Normalización: Jhon Ramos
 - Diagrama ER: Oscar Villalobos.
-- Normalización: Jhon Ramos y Carlos Fernandez.
 - Consultas: Oscar Villalobos, Carlos Fernandez y Jhon Ramos.
 
 ## Desarrollo del proyecto
+
+### Creacion de la base de datos
+```sql
+CREATE DATABASE ContrucEtitc;
+```
 
 ### Creacion de tablas y sus relaciones
 ```sql
@@ -242,6 +249,14 @@ CREATE TABLE programacion (
 );
 
 ```
+### Inserción o incorporacion de Datos
+
+### Normalizacion de la tabla actividad
+
+### Diagrama ER
+
+### consultas
+
 
 ## Conclusión
 
