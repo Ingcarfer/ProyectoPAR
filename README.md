@@ -256,27 +256,30 @@ CREATE TABLE proyecto_contratista (
 ```
 ### Inserción o incorporacion de Datos
 
-### Normalizacion de la tabla actividad
+### Normalizacion
 
-#### Tabla Completa
+#### Tabla Actividad
+
+##### Tabla Completa
 
 <p style="align:center">
 <img src="img/TABLA COMPLETA B.png" width="800" height="400" />
 </p>
 
 
-#### FN1
+##### FN1
 
-##### 1. Se quitan las filas con elementos repetidos
+###### 1. Se quitan las filas con elementos repetidos
 
 <p style="align:center">
 <img src="img/TABLA COMPLETA FN1 B.png" width="800" height="400" />
 </p>
 
 
-##### 2. Se dividen en varias tablas
+###### 2. Se dividen en varias tablas
 
-###### 1. ENTIDAD: ACTIVIDAD
+<p><strong><em>1. ENTIDAD: ACTIVIDAD</em></strong></p>
+
 <p style="align:center">
 <img src="img/ENTIDAD ACTIVIDAD FN1 B.png" width="800" height="400" />
 </p>
@@ -294,45 +297,45 @@ CREATE TABLE proyecto_contratista (
 </p>
 
 
-#### FN2
+##### FN2
 
-##### Se definen llaves y relaciones
+###### Se definen llaves y relaciones
 
-###### 1. ENTIDAD: ACTIVIDAD
+####### 1. ENTIDAD: ACTIVIDAD
 
 <p style="align:center">
 <img src="img/ENTIDAD ACTIVIDAD FN2 B.png" width="800" height="400" />
 </p>
 
-###### 2. ENTIDAD: PRIORIDAD Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+####### 2. ENTIDAD: PRIORIDAD Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
 
 <p style="align:center">
 <img src="img/ENTIDAD PRIORIDAD FN2 B.png" width="400" height="120" />
 </p>
 
-###### 3. ENTIDAD: ESTADO Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+####### 3. ENTIDAD: ESTADO Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
 
 <p style="align:center">
 <img src="img/ENTIDAD ESTADO FN2 B.png" width="400" height="120" />
 </p>
 
-#### FN3
+##### FN3
 
-##### ELEMINAR CAMPOS QUE NO DEPENDE DE LA LLAVE Y AGREGAR TABLAS Y LLAVE NECESARIAS
+###### ELEMINAR CAMPOS QUE NO DEPENDE DE LA LLAVE Y AGREGAR TABLAS Y LLAVE NECESARIAS
 
-###### ENTIDAD: ACTIVIDAD
+####### ENTIDAD: ACTIVIDAD
 
 <p style="align:center">
 <img src="img/ENTIDAD ACTIVIDAD FN3 B.png" width="800" height="400" />
 </p>
 
-###### ENTIDAD: PRIORIDAD
+####### ENTIDAD: PRIORIDAD
 
 <p style="align:center">
 <img src="img/ENTIDAD PRIORIDAD FN3 B.png" width="400" height="120" />
 </p>
 
-###### ENTIDAD: ESTADO
+####### ENTIDAD: ESTADO
 
 <p style="align:center">
 <img src="img/ENTIDAD ESTADO FN3 B.png" width="400" height="120" />
