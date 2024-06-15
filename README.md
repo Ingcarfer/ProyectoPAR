@@ -116,7 +116,7 @@ USE construc_etitc;
 
 -- Tabla: clientes
 CREATE TABLE clientes (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(20),
     Direccion VARCHAR(50),
     Ciudad VARCHAR(255),
@@ -128,7 +128,7 @@ CREATE TABLE clientes (
 
 -- Tabla: actividad
 CREATE TABLE actividad (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Descripcion VARCHAR(255),
     Unidad_de_Medida VARCHAR(50),
     Cantidad DECIMAL(10,2),
@@ -141,7 +141,7 @@ CREATE TABLE actividad (
 
 -- Tabla: contratistas
 CREATE TABLE contratistas (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Nombre_de_la_Empresa VARCHAR(255),
     Direccion VARCHAR(255),
     Correo_Electronico VARCHAR(255),
@@ -151,7 +151,7 @@ CREATE TABLE contratistas (
 
 -- Tabla: proveedores
 CREATE TABLE proveedores (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Nombre_de_la_Empresa VARCHAR(255),
     Direccion VARCHAR(255),
     Correo_Electronico VARCHAR(255),
@@ -161,7 +161,7 @@ CREATE TABLE proveedores (
 
 -- Tabla: empleados
 CREATE TABLE empleados (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(50),
     Apellido VARCHAR(50),
     Cargo VARCHAR(50),
@@ -171,7 +171,7 @@ CREATE TABLE empleados (
 
 -- Tabla: proyectos
 CREATE TABLE proyectos (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(255),
     Descripcion TEXT,
     Cliente_ID INT,
@@ -183,7 +183,7 @@ CREATE TABLE proyectos (
 
 -- Tabla: tareas
 CREATE TABLE tareas (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Proyecto_ID INT,
     Descripcion TEXT,
     Responsable_ID INT,
@@ -198,7 +198,7 @@ CREATE TABLE tareas (
 
 -- Tabla: materiales
 CREATE TABLE materiales (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(255),
     Descripcion TEXT,
     Proveedor_ID INT,
@@ -208,7 +208,7 @@ CREATE TABLE materiales (
 
 -- Tabla: ordenes_de_compra
 CREATE TABLE ordenes_de_compra (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Proyecto_ID INT,
     Material_ID INT,
     Cantidad DECIMAL(10,2),
@@ -220,7 +220,7 @@ CREATE TABLE ordenes_de_compra (
 
 -- Tabla: facturas
 CREATE TABLE facturas (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Proyecto_ID INT,
     Cliente_ID INT,
     Monto_Total DECIMAL(10,2),
@@ -232,7 +232,7 @@ CREATE TABLE facturas (
 
 -- Tabla: pagos
 CREATE TABLE pagos (
-    ID INT PRIMARY KEY,
+    ID INT AUTO_INCREMENT PRIMARY KEY,
     Factura_ID INT,
     Monto DECIMAL(10,2),
     Fecha DATE,
