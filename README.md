@@ -258,6 +258,24 @@ CREATE TABLE proyecto_contratista (
 
 ```
 ### Inserción o incorporacion de Datos
+```sql
+
+-- Usar la base de datos construc_etitc 
+USE construc_etitc;
+-- Insertar los datos en la tabla Cargos
+INSERT INTO cargos (Cargo, salario) VALUES
+('gerente', 12000000),
+('director de obra', 8000000),
+('residente de obra', 4000000),
+('residente administrativo', 4000000),
+('almacenista', 3200000),
+('residente sst', 4000000),
+('control de calidad', 3500000),
+('maestro de obra', 3000000),
+('oficial de obra', 2000000),
+('ayudante de obra', 1500000);
+
+```
 
 ### Normalizacion
 
