@@ -261,6 +261,8 @@ CREATE TABLE proyecto_contratista (
 
 ### Normalizacion
 
+Para la realización de la normalización, se descargo la información en un archivo CSV y posteriormente se procedio a realizar el proceso de normalización en un archivo de excel. Luego por medio de comandos SQL se prodecio a modificar los atributos de las  primeras tablas, asi como tambien se crearon las nuevas tablas y se subieron sus respectivos datos.
+
 #### Tabla Actividad
 
 ##### Tabla Completa
