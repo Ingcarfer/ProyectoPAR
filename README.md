@@ -335,7 +335,20 @@ INSERT INTO cargos (Cargo, Salario) VALUES
 ('ayudante de obra', 1500000);
 
 ```
-
+#### Tabla Prioridad
+```sql
+INSERT INTO Prioridades (ID, Prioridad, Rango_de_Ejecucion) VALUES
+(1, 'ALTA', '0 a 30 dias'),
+(2, 'MEDIANA', '31 a 90 dias'),
+(3, 'BAJA', 'Mas de 90 dias');
+```
+#### Tabla Estado
+```sql
+INSERT INTO Estados (ID, Estado) VALUES
+(1, 'Por empezar'),
+(2, 'En proceso'),
+(3, 'Finalizado');
+```
 ### Normalizacion
 
 Para la realización de la normalización, se descargo la información en un archivo CSV y posteriormente se procedio a realizar el proceso de normalización en un archivo de excel. Luego por medio de comandos SQL se prodecio a modificar los atributos de las  primeras tablas, asi como tambien se crearon las nuevas tablas y se subieron sus respectivos datos.
