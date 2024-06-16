@@ -337,17 +337,23 @@ INSERT INTO cargos (Cargo, Salario) VALUES
 ```
 #### Tabla Prioridad
 ```sql
-INSERT INTO Prioridades (ID, Prioridad, Rango_de_Ejecucion) VALUES
-(1, 'ALTA', '0 a 30 dias'),
-(2, 'MEDIANA', '31 a 90 dias'),
-(3, 'BAJA', 'Mas de 90 dias');
+-- Usar la base de datos construc_etitc 
+USE construc_etitc;
+-- Insertar los datos en la tabla prioridad
+INSERT INTO prioridad (Prioridad, Rango_de_Ejecucion) VALUES
+('ALTA', '0 a 30 dias'),
+('MEDIANA', '31 a 90 dias'),
+('BAJA', 'Mas de 90 dias');
 ```
 #### Tabla Estado
 ```sql
-INSERT INTO Estados (ID, Estado) VALUES
-(1, 'Por empezar'),
-(2, 'En proceso'),
-(3, 'Finalizado');
+-- Usar la base de datos construc_etitc 
+USE construc_etitc;
+-- Insertar los datos en la tabla estado
+INSERT INTO estado (Estado) VALUES
+('Por empezar'),
+('En proceso'),
+('Finalizado');
 ```
 ### Normalizacion
 
