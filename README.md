@@ -292,6 +292,29 @@ ADD CONSTRAINT fk_estado
 FOREIGN KEY (Estado_ID) REFERENCES estado(ID);
 
 ```
+
+#### SQL NORMZALIZACIÓN DE LA TABLA EMPLEADOS
+```sql
+-- Usar la base de datos construc_etitc
+USE construc_etitc;
+
+-- Normalización de la tabla empleados: eliminar la columna cargo
+ALTER TABLE empleados
+DROP COLUMN Cargo;
+
+-- Crear la tabla cargos
+CREATE TABLE cargos (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Cargo VARCHAR(50) NOT NULL,
+    Salario INT NOT NULL
+);
+
+-- Modificación de la tabla empleados para añadir la clave foránea Cargos_ID 
+ALTER TABLE empleados
+ADD COLUMN Cargos_ID INT,
+ADD CONSTRAINT fk_cargos
+FOREIGN KEY (Cargos_ID) REFERENCES cargos(ID);
+```
 ### Inserción o incorporacion de Datos
 #### Tabla cargos.
 ```sql
