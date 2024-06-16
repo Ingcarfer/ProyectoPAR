@@ -444,7 +444,7 @@ Para la realización de la normalización, se descargo la información en un arc
 ### Diagrama ER
 En este diagrama de una constructora, se muestra las entidades, sus atributos y las relaciones entre ellas. Objetivo conceptualizar la base de datos relacional.
 <p align="center">
-  <img src="img/Diagrama ER.jpg" width="600" />
+  <img src="img/Diagrama ERvr3.jpg" width="600" />
 </p>
 
 
