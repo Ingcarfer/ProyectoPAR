@@ -284,6 +284,15 @@ CREATE TABLE estado (
     estado VARCHAR(15)
 );
 
+-- Modificación de la tabla actividad para añadir las claves foráneas Prioridad_ID y Estado_ID
+ALTER TABLE actividad
+ADD COLUMN Prioridad_ID INT,
+ADD COLUMN Estado_ID INT,
+ADD CONSTRAINT fk_prioridad
+FOREIGN KEY (Prioridad_ID) REFERENCES prioridad(ID),
+ADD CONSTRAINT fk_estado
+FOREIGN KEY (Estado_ID) REFERENCES estado(ID);
+
 ```
 ### Inserción o incorporacion de Datos
 #### Tabla cargos.
@@ -319,16 +328,16 @@ Para la realización de la normalización, se descargo la información en un arc
 </p>
 
 
-##### FN1
+#### FN1
 
-###### 1. Se quitan las filas con elementos repetidos
+**1. Se quitan las filas con elementos repetidos**
 
 <p style="align:center">
 <img src="img/TABLA COMPLETA FN1 B.png" width="800" height="400" />
 </p>
 
 
-###### 2. Se dividen en varias tablas
+**2. Se dividen en varias tablas**
 
 <p><strong><em>1. ENTIDAD: ACTIVIDAD</em></strong></p>
 
@@ -336,58 +345,58 @@ Para la realización de la normalización, se descargo la información en un arc
 <img src="img/ENTIDAD ACTIVIDAD FN1 B.png" width="800" height="400" />
 </p>
 
-###### 2. ENTIDAD: PRIORIDAD
+<p><strong><em>2. ENTIDAD: PRIORIDAD</em></strong></p>
 
 <p style="align:center">
 <img src="img/ENTIDAD PRIORIDAD FN1 B.png" width="400" height="120" />
 </p>
 
-###### 1. ENTIDAD: ESTADO
+<p><strong><em>1. ENTIDAD: ESTADO</em></strong></p>
 
 <p style="align:center">
 <img src="img/ENTIDAD ESTADO FN1 B.png" width="400" height="120" />
 </p>
 
 
-##### FN2
+#### FN2
 
-###### Se definen llaves y relaciones
+**Se definen llaves y relaciones**
 
-####### 1. ENTIDAD: ACTIVIDAD
+<p><strong><em>1. ENTIDAD: ACTIVIDAD</em></strong></p>
 
 <p style="align:center">
 <img src="img/ENTIDAD ACTIVIDAD FN2 B.png" width="800" height="400" />
 </p>
 
-####### 2. ENTIDAD: PRIORIDAD Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+<p><strong><em>2. ENTIDAD: PRIORIDAD Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)</P></em></strong>
 
 <p style="align:center">
 <img src="img/ENTIDAD PRIORIDAD FN2 B.png" width="400" height="120" />
 </p>
 
-####### 3. ENTIDAD: ESTADO Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)
+<p><strong><em>3. ENTIDAD: ESTADO Relaciones de una actividad a una prioridad y una prioridad a muchas una actividad (Uno a muchos)<p><strong><em>
 
 <p style="align:center">
 <img src="img/ENTIDAD ESTADO FN2 B.png" width="400" height="120" />
 </p>
 
-##### FN3
+#### FN3
 
-###### ELEMINAR CAMPOS QUE NO DEPENDE DE LA LLAVE Y AGREGAR TABLAS Y LLAVE NECESARIAS
+**ELiminar campos que no depende de la llave y agregar tablas asi como tambiem las llaves necesarias**
 
-####### ENTIDAD: ACTIVIDAD
+<p><strong><em>ENTIDAD: ACTIVIDAD</em></strong></p>
 
 <p style="align:center">
 <img src="img/ENTIDAD ACTIVIDAD FN3 B.png" width="800" height="400" />
 </p>
 
-####### ENTIDAD: PRIORIDAD
+<p><strong><em>ENTIDAD: PRIORIDAD</em></strong></p>
 
 <p style="align:center">
 <img src="img/ENTIDAD PRIORIDAD FN3 B.png" width="400" height="120" />
 </p>
 
-####### ENTIDAD: ESTADO
+<p><strong><em>ENTIDAD: ESTADO</em></strong></p>
 
 <p style="align:center">
 <img src="img/ENTIDAD ESTADO FN3 B.png" width="400" height="120" />
