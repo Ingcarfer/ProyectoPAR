@@ -128,6 +128,18 @@ CREATE TABLE clientes (
     Numero_de_Telefono VARCHAR(20)
 );
 
+-- Tabla: proyectos
+CREATE TABLE proyectos (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(255),
+    Descripcion TEXT,
+    Cliente_ID INT,
+    Fecha_de_Inicio DATE,
+    Fecha_de_Finalizacion DATE,
+    Estado VARCHAR(20),
+    FOREIGN KEY (Cliente_ID) REFERENCES clientes(ID)
+);
+
 -- Tabla: actividad
 CREATE TABLE actividad (
     ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -139,7 +151,7 @@ CREATE TABLE actividad (
     Valor_Total DECIMAL(10,2),
     Prioridad VARCHAR(10),
     Dias_de_Ejecucion INT,
-    Estado VARCHAR(15)
+    Estado VARCHAR(15),
     FOREIGN KEY (Proyectos_ID) REFERENCES proyectos(ID)
     
 );
@@ -154,7 +166,7 @@ CREATE TABLE contratistas (
     Actividad_ID INT,
     FOREIGN KEY (Actividad_ID) REFERENCES actividad(ID)
 );
-255
+
 -- Tabla: proveedores
 CREATE TABLE proveedores (
     ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -176,18 +188,6 @@ CREATE TABLE empleados (
     Cargo VARCHAR(50),
     Correo_Electronico VARCHAR(255),
     Telefono VARCHAR(20)
-);
-
--- Tabla: proyectos
-CREATE TABLE proyectos (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(255),
-    Descripcion TEXT,
-    Cliente_ID INT,
-    Fecha_de_Inicio DATE,
-    Fecha_de_Finalizacion DATE,
-    Estado VARCHAR(20),
-    FOREIGN KEY (Cliente_ID) REFERENCES clientes(ID)
 );
 
 -- Tabla: tareas
@@ -249,8 +249,6 @@ CREATE TABLE pagos (
     FOREIGN KEY (Factura_ID) REFERENCES facturas(ID)
 );
 
-
-
 -- Tabla intermedia: proyecto_contratista
 CREATE TABLE proyecto_contratista (
     Proyecto_ID INT,
@@ -301,7 +299,7 @@ FOREIGN KEY (Estado_ID) REFERENCES estado(ID);
 -- Usar la base de datos construc_etitc 
 USE construc_etitc;
 -- Insertar los datos en la tabla Cargos
-INSERT INTO cargos (Cargo, salario) VALUES
+INSERT INTO cargos (Cargo, Salario) VALUES
 ('gerente', 12000000),
 ('director de obra', 8000000),
 ('residente de obra', 4000000),
