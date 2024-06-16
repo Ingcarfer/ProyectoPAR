@@ -120,15 +120,14 @@ CREATE TABLE clientes (
     Nombre VARCHAR(20),
     Direccion VARCHAR(50),
     Ciudad VARCHAR(255),
-    Condado VARCHAR(20),
-    Codigo_Postal VARCHAR(20),
-    Pais VARCHAR(20),
+    Correo_Electronico VARCHAR(255),
     Numero_de_Telefono VARCHAR(20)
 );
 
 -- Tabla: actividad
 CREATE TABLE actividad (
     ID INT AUTO_INCREMENT PRIMARY KEY,
+    Proyectos_ID INT,
     Descripcion VARCHAR(255),
     Unidad_de_Medida VARCHAR(50),
     Cantidad DECIMAL(10,2),
@@ -137,21 +136,25 @@ CREATE TABLE actividad (
     Prioridad VARCHAR(10),
     Dias_de_Ejecucion INT,
     Estado VARCHAR(15)
+    FOREIGN KEY (Proyectos_ID) REFERENCES proyectos(ID)
+    
 );
 
 -- Tabla: contratistas
 CREATE TABLE contratistas (
     ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nit VARCHAR(20),
     Nombre_de_la_Empresa VARCHAR(255),
     Direccion VARCHAR(255),
     Correo_Electronico VARCHAR(255),
     Actividad_ID INT,
     FOREIGN KEY (Actividad_ID) REFERENCES actividad(ID)
 );
-
+255
 -- Tabla: proveedores
 CREATE TABLE proveedores (
     ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nit VARCHAR(20),
     Nombre_de_la_Empresa VARCHAR(255),
     Direccion VARCHAR(255),
     Correo_Electronico VARCHAR(255),
@@ -162,6 +165,8 @@ CREATE TABLE proveedores (
 -- Tabla: empleados
 CREATE TABLE empleados (
     ID INT AUTO_INCREMENT PRIMARY KEY,
+    Documento VARCHAR(50),
+    Tipo_de_documento VARCHAR(50),
     Nombre VARCHAR(50),
     Apellido VARCHAR(50),
     Cargo VARCHAR(50),
@@ -250,8 +255,6 @@ CREATE TABLE proyecto_contratista (
     FOREIGN KEY (Contratista_ID) REFERENCES contratistas(ID),
     PRIMARY KEY (Proyecto_ID, Contratista_ID)
 );
-
-
 
 ```
 ### Inserción o incorporacion de Datos
