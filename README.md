@@ -258,7 +258,7 @@ CREATE TABLE proyecto_contratista (
 
 ```
 ### Inserción o incorporacion de Datos
-####Tabla cargos.
+#### Tabla cargos.
 ```sql
 
 -- Usar la base de datos construc_etitc 
