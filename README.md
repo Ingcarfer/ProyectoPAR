@@ -347,8 +347,9 @@ CREATE TABLE proyecto_contratista (
 
 
 ### Diagrama ER
+En este diagrama de una constructora, se muestra las entidades, sus atributos y las relaciones entre ellas. Objetivo conceptualizar la base de datos relacional.
 <p align="center">
-  <img src="img/Normalizacion1.jpg" width="600" />
+  <img src="img/Diagrama ER.jpg" width="600" />
 </p>
 
 
