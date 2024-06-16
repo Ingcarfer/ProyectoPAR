@@ -109,6 +109,10 @@ CREATE DATABASE construc_etitc;
 
 ### Creacion de tablas y sus relaciones
 
+
+#### Creación de tablas
+
+
 ```sql
 
 -- Usar la base de datos construc_etitc 
@@ -254,6 +258,30 @@ CREATE TABLE proyecto_contratista (
     FOREIGN KEY (Proyecto_ID) REFERENCES proyectos(ID),
     FOREIGN KEY (Contratista_ID) REFERENCES contratistas(ID),
     PRIMARY KEY (Proyecto_ID, Contratista_ID)
+);
+
+```
+#### SQL NORMZALIZACIÓN DE LA TABLA ACTIVIDAD
+```sql
+-- Usar la base de datos construc_etitc
+USE construc_etitc;
+
+-- Normalización de la tabla actividad: eliminar las columnas Prioridad y Estado
+ALTER TABLE actividad
+DROP COLUMN Prioridad,
+DROP COLUMN Estado;
+
+-- Creación de la tabla prioridad
+CREATE TABLE prioridad (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    prioridad VARCHAR(10),
+    Rango_de_Ejecucion VARCHAR(50)
+);
+
+-- Creación de la tabla estado
+CREATE TABLE estado (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    estado VARCHAR(15)
 );
 
 ```
