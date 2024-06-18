@@ -15,9 +15,11 @@ El problema que vamos abordar es la implementación de una base de datos para un
 Actualmente, no disponemos de una base de datos previa. En esta fase inicial, nuestro equipo creará y diseñará la base de datos desde cero. En futuras fases, evaluaremos la posibilidad de complementar la base de datos con información disponible en fuentes públicas, como la Cámara de Comercio, para enriquecer y completar la información existente.
 
 ## Objetivo General
+
+
 Diseñar, manipular y administrar la base de datos creada para la empresa ContrucEtitc.sas.
 
-Tienes razón. Aquí está la lista utilizando el formato adecuado para listas no ordenadas:
+
 
 ## Beneficios de la Implementación
 
