@@ -483,6 +483,54 @@ SELECT SUM(Monto_Total) FROM facturas;
 SELECT SUM(Monto) FROM pagos;
 
 ```
+#### Lista todos los materiales con su ID y nombre.
+```sql
+SELECT ID, Nombre FROM materiales;
+```
+#### Lista todos los contratistas con su nombre, NIT y nombre de la actividad.
+```sql
+SELECT c.Nombre_de_la_Empresa, c.Nit, a.Descripcion
+FROM contratistas c
+    JOIN actividad a ON c.Actividad_ID = a.ID;
+
+```
+
+#### Lista todos los materiales con su nombre, nombre del proveedor y precio.
+```sql
+SELECT m.Nombre, p.Nombre_de_la_Empresa, m.Precio
+FROM materiales m
+    JOIN proveedores p ON m.Proveedor_ID = p.ID;
+```
+#### Lista todos los proyectos con su nombre, descripción, nombre del cliente y el monto total de sus facturas.
+```sql
+SELECT p.Nombre, p.Descripcion, c.Nombre, SUM(f.Monto_Total)
+FROM
+    proyectos p
+    JOIN clientes c ON p.Cliente_ID = c.ID
+    JOIN facturas f ON p.ID = f.Proyecto_ID
+GROUP BY
+    p.Nombre,
+    p.Descripcion,
+    c.Nombre;
+```
+#### Muestra el contratista con el monto total de facturas más alto.
+```sql
+SELECT c.Nombre_de_la_Empresa, SUM(f.Monto_Total)
+FROM
+    contratistas c
+    JOIN proyecto_contratista pc ON c.ID = pc.Contratista_ID
+    JOIN proyectos p ON pc.Proyecto_ID = p.ID
+    JOIN facturas f ON p.ID = f.Proyecto_ID
+GROUP BY
+    c.Nombre_de_la_Empresa
+ORDER BY SUM(f.Monto_Total) DESC
+LIMIT 1;
+```
+
+
+
+
+
 
 ## Conclusión
 
