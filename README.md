@@ -568,6 +568,9 @@ FROM
 GROUP BY
     c.Nombre;
 ```
+## Archivo final
+
+https://github.com/Ingcarfer/ProyectoPAR/raw/main/archivos/construc_etitc%20(1).sql
 
 ## Conclusión
 
