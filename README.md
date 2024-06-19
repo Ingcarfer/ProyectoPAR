@@ -458,6 +458,31 @@ En este diagrama de una constructora, se muestra las entidades, sus atributos y 
 
 ### consultas
 
+#### ¿todos los clientes con su ID, nombre y correo electrónico?
+```sql
+SELECT ID, Nombre, Correo_Electronico FROM clientes;
+```
+#### ¿el número total de proyectos en la base de datos?
+```sql
+SELECT COUNT(*) FROM proyectos;
+```
+#### ¿todos los proyectos con su nombre, descripción, nombre del cliente y fecha de inicio.?
+```sql
+SELECT p.Nombre, p.Descripcion, c.Nombre, p.Fecha_de_Inicio
+FROM proyectos p
+    JOIN clientes c ON p.Cliente_ID = c.ID;
+
+```
+#### ¿Muestra el monto total de todas las facturas?
+```sql
+SELECT SUM(Monto_Total) FROM facturas;
+
+```
+#### ¿Muestra el monto total de todos los pagos?
+```sql
+SELECT SUM(Monto) FROM pagos;
+
+```
 
 ## Conclusión
 
