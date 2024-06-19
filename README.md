@@ -444,7 +444,9 @@ Para la realización de la normalización, se descargo la información en un arc
 <img src="img/ENTIDAD ESTADO FN3 B.png" width="400" height="120" />
 </p>
 
+#### LINK DE DESCARGA DE ARCHIVO EXCEL NORMALIZACIÓN
 
+https://github.com/Ingcarfer/ProyectoPAR/raw/main/archivos/NORMALIZACI%C3%93N%20TABLA%20ACTIVIDAD.xlsx
 
 
 
