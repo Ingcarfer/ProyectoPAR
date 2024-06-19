@@ -526,11 +526,46 @@ GROUP BY
 ORDER BY SUM(f.Monto_Total) DESC
 LIMIT 1;
 ```
+#### ¿ todos los materiales con su ID y nombre?
+```sql
+SELECT ID, Nombre FROM materiales;
+```
+#### ¿ todos los contratistas con su nombre, NIT y nombre de la actividad.?
+```sql
+SELECT c.Nombre_de_la_Empresa, c.Nit, a.Descripcion
+FROM contratistas c
+    JOIN actividad a ON c.Actividad_ID = a.ID;
+```
 
+#### ¿ todos los materiales con su nombre, nombre del proveedor y precio?
+```sql
+SELECT m.Nombre, p.Nombre_de_la_Empresa, m.Precio
+FROM materiales m
+    JOIN proveedores p ON m.Proveedor_ID = p.ID;
+```
 
+#### ¿ todos los empleados con su nombre, cargo y el monto total de sus tareas.?
+```sql
+SELECT e.Nombre, c.Cargo, SUM(t.Dias_de_Ejecucion)
+FROM
+    empleados e
+    JOIN cargos c ON e.Cargos_ID = c.ID
+    JOIN tareas t ON e.ID = t.Empleado_ID
+GROUP BY
+    e.Nombre,
+    c.Cargo;
+```
 
-
-
+#### ¿ el monto total de todas las facturas para cada cliente?
+```sql
+SELECT c.Nombre, SUM(f.Monto_Total)
+FROM
+    clientes c
+    JOIN proyectos p ON c.ID = p.Cliente_ID
+    JOIN facturas f ON p.ID = f.Proyecto_ID
+GROUP BY
+    c.Nombre;
+```
 
 ## Conclusión
 
